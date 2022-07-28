@@ -1,11 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: aliceblue;
+  background-color: whitesmoke;
   font-family: "Roboto", sans-serif;
 }
 
 .container {
   width: 80%;
   margin: auto;
+  
 }
 
 .container h1 {
@@ -14,13 +19,16 @@ body {
 }
 
 .user-list {
-    border: dotted 3px green;
-  
+  background-color: #ffffff;
+  border-style: solid;
+  border-color: cadetblue;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .user-data {
   width: 70%;
-  margin:auto;
+  margin: auto;
 }
 
 .user-data img {
@@ -33,16 +41,42 @@ body {
 }
 
 .btn-user-add {
-    background-color: rgb(133, 247, 40);
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 20;
-    margin: auto;
-    display: block;
+  background-color: rgb(133, 247, 40);
+  color: #15007c;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin: auto;
+  display: block;
+  margin-top: 25px;
 }
 
-/*Comenzando con media q*/
+/*Comenzando con media queries tamanio medio*/
+@media (min-width: 768px) {
+  .user-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 
+  .user-data {
+    width: 48%;
+    margin: 0;
+  }
+}
 
+@media (min-width: 1200px) {
+  .user-list {
+    max-width: 700px;
+    margin: auto;
+  }
+  .user-data {
+    width: 28%;
+    text-align: center;
+  }
+
+  .user-data img {
+    width: 80%;
+  }
+}
